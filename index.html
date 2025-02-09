@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+        rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="style.css" />
+    <title>📖 Dictionary</title>
+</head>
+<body>
+    <h2 class="owner"> By :- Rajveer Bishnoi ✨</h2>
+    <div class="container">
+        <div class="search-box">
+            <input
+                type="text"
+                placeholder="Type the word here.."
+                id="inp-word"
+            />
+            <button id="search-btn">Search 🔎</button>
+        </div>
+
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+        </select>
+        <div class="result" id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

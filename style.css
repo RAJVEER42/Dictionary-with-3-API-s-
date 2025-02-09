@@ -1,0 +1,290 @@
+
+*  {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:not(i) {
+    font-family: "Poppins", sans-serif;
+}
+ .owner{
+    margin-top: 780px;
+    text-align: right;
+    text-decoration: wavy rgb(240, 240, 243) underline;
+    padding-right: 50px;
+ }
+ .owner:hover{
+    text-decoration: rgb(20, 20, 20)  underline;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #d1c8d5;
+
+ }
+body {
+    background: linear-gradient(45deg, #ff6a00, #ff1493, #4b0082, #00bfff, #ffff00);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.2);  
+    width: 90vmin;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 80px 50px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(38, 33, 61, 0.3);
+    animation: fadeIn 2s ease-in; 
+    z-index: 1;  
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);  
+    border: 1px solid rgba(253, 251, 251, 0.3);  
+}
+.container:hover{
+    background-color: rgba(246, 241, 241, 0.4);
+}
+
+.search-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-box input {
+    padding: 5px;
+    width: 75%;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #b08de4;
+    font-size: 16px;
+    color: #575a7b;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+
+.search-box button {
+    padding: 15px 0;
+    width: 22%;
+    background: linear-gradient(to top, #89e146, #bccd20);  /* Gradient for the button */
+    border: none;
+    outline: none;
+    color: #fcfbfb;
+    font-weight: bold;
+    font-size: medium;
+    letter-spacing: 1px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.search-box button:hover {
+    color: #585656;
+    font-weight: bold;
+    font-size: medium;
+    letter-spacing: 2px;
+    background: linear-gradient(to bottom, #b8d406, #d5c6c6);  /* Hover effect for button */
+    cursor: pointer;
+}
+
+#language-selector {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ae9cff;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #575a7b;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+}
+
+.result {
+    position: relative;
+    margin-top: 30px;
+}
+
+.result h3 {
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: #1f194c;
+    background: linear-gradient(to right, #070707, #454445); /* Gradient for result heading */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.result .word {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;  /* Reduced space for cleaner look */
+}
+
+.result button {
+    background-color: transparent;
+    color: #ff6a00;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.result .details {
+    letter-spacing: 1;
+    display: flex;
+    gap: 10px;
+    color: #4f4d4d;
+    margin: 5px 0 20px 0;
+    font-size: 14px;
+}
+
+.word-meaning {
+    color: #2f2b2b;
+}
+
+.word-example {
+    color: #575a7b;
+    font-style: italic;
+    border-left: 5px solid #ff6a00;
+    padding-left: 20px;
+    margin-top: 30px;
+    background: linear-gradient(to right, #ff6a00, #ff1493); /* Gradient background for the example */
+}
+
+.error {
+    margin-top: 80px;
+    text-align: center;
+    color: #bc1218;
+}
+
+.translation {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #4a4a4a;
+    font-style: italic;
+    background: linear-gradient(to right, #ff6a00, #ff1493); /* Gradient background for translations */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} 
+.pronunciation-btn {
+    background-color: #f0f0f0;  
+    border: 2px solid #333; 
+    padding: 10px 15px;
+    font-family: 'Times New Roman', Times, serif;  
+    font-size: 14px;
+    color: #333;  
+    border-radius: 5px; 
+    transition: all 0.3s ease; 
+    text-decoration: none;
+    display: inline-flex;  
+    align-items: center;
+    gap: 8px; 
+}
+
+.pronunciation-btn i {
+    font-size: 16px;  
+    color: #333;  
+}
+
+
+.pronunciation-btn:hover {
+    background: linear-gradient(to right, #dceabb, #d2f1a6 , rgb(213, 244, 120) , rgb(164, 239, 73) , rgb(144, 241, 27));
+    color: black;
+    padding: 12px;
+    border-color: #666; 
+    cursor: pointer; 
+}
+
+
+.pronunciation-btn:focus {
+    outline: none;  
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+.synonyms {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #4f4d4d;
+    font-weight: bold;
+    background: linear-gradient(to right, #757474, #464545 , rgb(40, 40, 40) , rgb(0, 0, 0)); 
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.synonyms strong {
+    color: #323030; 
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-decoration: rgb(111, 38, 230) wavy underline;
+}
+
+.synonyms p {
+    letter-spacing: 2px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #3d0505;
+    font-style: italic;
+
+}
+
+.synonyms .error {
+    text-align: center;
+    color: #bc1218;
+    font-size: 16px;
+}
+
+.antonyms {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #4f4d4d;
+    font-weight: bold;
+    background: linear-gradient(to right, #757474, #464545 , rgb(40, 40, 40) , rgb(0, 0, 0));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.antonyms strong {
+    color: #323030; 
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-decoration: rgb(111, 38, 230) wavy underline;
+}
+
+
+.antonyms p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #2f2b2b;
+    font-style: italic;
+}
+
+.error {
+    margin-top: 20px;
+    text-align: center;
+    color: #bc1218;
+}
+
